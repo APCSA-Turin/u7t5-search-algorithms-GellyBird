@@ -49,9 +49,76 @@ public class SpellChecker {
      *  It also tracks the number of words checked (loop iterations) and
      *  prints that value out before returning.
      */
+    // public boolean binarySpellCheck(String word) {
+    //     loopCounter = 0;
+    //     int leftIdx = 1;
+    //     int rightIdx = dictionary.size();
+    //     int middleIdx = leftIdx + ((rightIdx - leftIdx)/2);
+    //     if (dictionary.get(leftIdx - 1).compareTo(word) == 0) {
+    //         loopCounter++;
+    //         System.out.println(loopCounter);
+    //         return true;
+    //     } 
+        
+    //     if (dictionary.get(rightIdx - 1).compareTo(word) == 0) {
+    //         loopCounter++;
+    //         System.out.println(loopCounter);
+    //         return true;
+    //     }  
+
+    //     while (leftIdx != rightIdx && leftIdx != middleIdx) {
+    //         loopCounter++;
+    //         middleIdx = leftIdx + ((rightIdx - leftIdx)/2);
+    //         if (dictionary.get(middleIdx).compareTo(word) == 0) {
+    //             System.out.println(loopCounter);
+    //             return true;
+    //         } else if (dictionary.get(middleIdx).compareTo(word) < 0) {
+    //             leftIdx = middleIdx + 1 ;
+    //         } else if (dictionary.get(middleIdx).compareTo(word) > 0) {
+    //             rightIdx = middleIdx - 1;
+    //         }
+    //     }
+    //     loopCounter++;
+    //     System.out.println(loopCounter);
+    //     return false;
+    // }
+
     public boolean binarySpellCheck(String word) {
+        loopCounter = 0;
+        int leftIdx = 1;
+        int rightIdx = dictionary.size() - 1;
+        int middleIdx = leftIdx + ((rightIdx - leftIdx)/2);
+        if (dictionary.get(leftIdx - 1).compareTo(word) == 0) {
+            loopCounter++;
+            System.out.println(loopCounter);
+            return true;
+        }
+       
+        if (dictionary.get(rightIdx).compareTo(word) == 0) {
+            loopCounter++;
+            System.out.println(loopCounter);
+            return true;
+        }  
+ 
+
+
+        while (leftIdx != rightIdx && leftIdx != middleIdx) {
+            loopCounter++;
+            middleIdx = leftIdx + ((rightIdx - leftIdx)/2);
+            if (dictionary.get(middleIdx).compareTo(word) == 0) {
+                System.out.println(loopCounter);
+                return true;
+            } else if (dictionary.get(middleIdx).compareTo(word) < 0) {
+                leftIdx = middleIdx + 1 ;
+            } else if (dictionary.get(middleIdx).compareTo(word) > 0) {
+                rightIdx = middleIdx - 1;
+            }
+        }
+        loopCounter++;
+        System.out.println(loopCounter);
         return false;
     }
+
 
     // private helper method, called in the constructor, which loads the words
     // from the dictionary.txt text file into the "dictionary" instance variable!
