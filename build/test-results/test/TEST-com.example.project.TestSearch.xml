@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.project.TestSearch" tests="8" skipped="0" failures="1" errors="0" timestamp="2025-02-25T17:15:14" hostname="codespaces-92a35d" time="0.042">
+<testsuite name="com.example.project.TestSearch" tests="8" skipped="0" failures="1" errors="0" timestamp="2025-02-26T16:39:14" hostname="codespaces-92a35d" time="0.061">
   <properties/>
-  <testcase name="testLinearSearchFoundList()" classname="com.example.project.TestSearch" time="0.001"/>
+  <testcase name="testLinearSearchFoundList()" classname="com.example.project.TestSearch" time="0.002"/>
   <testcase name="testLinearSearchFirstArrayList()" classname="com.example.project.TestSearch" time="0.001"/>
-  <testcase name="testLinearSearchFoundArray()" classname="com.example.project.TestSearch" time="0.0"/>
+  <testcase name="testLinearSearchFoundArray()" classname="com.example.project.TestSearch" time="0.007"/>
   <testcase name="testLinearSearchCountList()" classname="com.example.project.TestSearch" time="0.001"/>
-  <testcase name="testLinearSearchCountArray()" classname="com.example.project.TestSearch" time="0.001"/>
-  <testcase name="testLinearSearchLastArray()" classname="com.example.project.TestSearch" time="0.013">
+  <testcase name="testLinearSearchCountArray()" classname="com.example.project.TestSearch" time="0.002"/>
+  <testcase name="testLinearSearchLastArray()" classname="com.example.project.TestSearch" time="0.016">
     <failure message="org.opentest4j.AssertionFailedError: expected: &lt;0&gt; but was: &lt;-1&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;0&gt; but was: &lt;-1&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at app//org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
@@ -100,7 +100,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testLinearSearchFirstArray()" classname="com.example.project.TestSearch" time="0.013"/>
+  <testcase name="testLinearSearchFirstArray()" classname="com.example.project.TestSearch" time="0.008"/>
   <testcase name="testLinearSearchLastList()" classname="com.example.project.TestSearch" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

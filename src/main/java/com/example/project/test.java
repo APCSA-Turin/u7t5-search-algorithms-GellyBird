@@ -5,11 +5,14 @@ import java.util.Arrays;
 
 import com.example.project.Binary_Search.BinarySearch;
 import com.example.project.Linear_Search.Search;
+import com.example.project.Repair.RepairSchedule;
 
 public class test {
     public static void main(String[] args) {
-    int[] singleElementArray = {10};
-    ArrayList<Integer> singleElementList = new ArrayList<>(Arrays.asList(10));
-    System.out.println(Search.linearSearchLast(singleElementList,10));
+        RepairSchedule schedule = new RepairSchedule(3); 
+
+        // all mechanics free
+        // ArrayList<Integer> availableMechanics = schedule.availableMechanics();
+        System.out.println(schedule.availableMechanics());
     }
 }
